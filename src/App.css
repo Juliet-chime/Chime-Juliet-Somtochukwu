@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+.app {
+  padding: 50px 80px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.userInput {
+  width: 50%;
+  border: 2px solid #e5e5e5;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/482/482631.png');
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 15px 15px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.userInput::placeholder {
+  padding-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.userInput:focus {
+  outline: none;
+}
+
+.dataholder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.item {
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 20px;
+  padding: 5px 10px;
+  align-items: center;
+}
+
+.item img {
+  width: 70px;
+  height: 70px;
+}
+
+.user-item span {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .app {
+    padding: 50px 10px;
+
   }
-  to {
-    transform: rotate(360deg);
+
+  .userInput {
+    width: 60%;
+  }
+
+  .dataholder {
+    display: block;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+  }
+
+  .item {
+    width: 90%;
+    margin: 0px 10px 15px 10px;
   }
 }
